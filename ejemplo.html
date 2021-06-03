@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejemplo-linea">
+        <input type="file" id="boton-file" accept="image/*"
+        multiple="multiple" />
+        <input type="button" value="listar" onclick="actualizarLista()" />
+        <pre id="lista-archivos"></pre>
+    </div>
+    <script>
+        function actualizarLista(){
+            var inpute = document.getElementById("boton-file");
+            var lista = inpute.files;
+            var cad = "Total archivos:" +lista.length + "<br />";
+            for (var i=0; i<lista.length; i++){
+                if (cad != "") cad += "------------------<br />";
+                cad += "Nombre: " + lista[i].name + "<br />" +
+                       "Tipo: " + lista[i].type + "<br />" +
+                       "Tamaño: " + lista[i].size + " bytes<br />" +
+                       "Fecha: " + lista[i].lastModifiedDate + "<br />";
+            }
+            document.getElementById("lista-archivos").innerHTML = cad;
+        }
+    </script>
+
+<div class="ejemplo-linea">
+    <input type="file" id="boton-file2" /><br />
+    Leer como
+    texto<input type="radio" name="read-as" value="text" checked="checked" />
+    datos URL<input type="radio" name="read-as" value="data-url" />
+    array buffer<input type="radio" name="read-as" value="array-buffer" />
+    <input type="button" value="leer" onclick="leerArchivo()" /><br />
+    Tipo MIME: <span id="tipo-mime" class="codigo"></span><br />
+    Longitud: <span id="longitud" class="codigo"></span> bytes<br />
+    <textarea rows="10" style="width: 98%" class="codigo"
+    id="contenido-archivo"></textarea>
+</div>
+<script>
+    function leerArchivo(){
+        var inpute = document.getElementById("boton-file2");
+        if (inpute.files.length > 0){
+            var radios = document.getElementsByName("read-as");
+            var opcion = "text";
+            for (var i=0; i<radios.length; i++){
+                if (radios[i].checked) {
+                    opcion = radios[i].value;
+                    break;
+                }
+            }
+            var archivo = inpute.files[0];
+            document.getElementById("tipo-mime").textContent = archivo.type;
+            document.getElementById("longitud").textContent = archivo.size;
+            var lector = new FileReader();
+            lector.addEventListener("load",
+                function(evento){
+                    var cadena  = evento.target.result;
+                    if (cadena.length>50000){
+                        cadena = cadena.substr(0,50000) +
+                        "\r\n..........Sólo se presentan 50000 bytes para no colapsar el navegador......";
+                    }
+                    document.getElementById("contenido-archivo").value = cadena;
+                }, false);
+            if (opcion=="text"){
+                lector.readAsText(archivo);
+            } else if (opcion=="data-url"){
+                lector.readAsDataURL(archivo);
+            } else {
+                lector.readAsArrayBuffer(archivo);
+            }
+        }
+    }
+</script>
+
+
+
+    <div class="ejemplo-linea">
+        Leer como
+        texto<input type="radio" name="read-as3" value="text" checked="checked" />
+        datos URL<input type="radio" name="read-as3" value="data-url" />
+        array buffer<input type="radio" name="read-as3" value="array-buffer" /><br />
+        Tipo MIME: <span id="tipo-mime3" class="codigo"></span><br />
+        Longitud: <span id="longitud3" class="codigo"></span> bytes<br />
+        <div class="codigo" id="contenido-archivo3" wrap="off"
+        style="white-space: pre; height: 10em; overflow: auto; border: gray solid 1px;">
+            Arrastre un archivo aquí.
+        </div>
+    </div>
+    <script>
+        //Leemos archivos. En el arrastre viene la colección de archivos pues se pueden
+        //seleccionar y arrastrar varios. Aquí sólo cogeremos el primero.
+        function leerArchivo3(files){
+            if (files.length > 0){
+                var radios = document.getElementsByName("read-as3");
+                var opcion = "text";
+                for (var i=0; i<radios.length; i++){
+                    if (radios[i].checked) {
+                        opcion = radios[i].value;
+                        break;
+                    }
+                }
+                var archivo = files[0];
+                document.getElementById("tipo-mime3").textContent = archivo.type;
+                document.getElementById("longitud3").textContent = archivo.size;
+                var lector = new FileReader();
+                lector.addEventListener("load",
+                    function(evento){
+                        var cadena  = evento.target.result;
+                        if (cadena.length>50000){
+                            cadena = cadena.substr(0,50000) +
+                            "\r\n..........Sólo se presentan 50000 bytes para no colapsar el navegador......";
+                        }
+                        document.getElementById("contenido-archivo3").value = cadena;
+                    }, false);
+                if (opcion=="text"){
+                    lector.readAsText(archivo);
+                } else if (opcion=="data-url"){
+                    lector.readAsDataURL(archivo);
+                } else {
+                    lector.readAsArrayBuffer(archivo);
+                }
+            }
+        }
+    </script>
+    <script>
+        window.onload = function(){
+           
+            var ta3 = document.getElementById("contenido-archivo3");
+            //Anulamos el drag en toda la página (CH no necesita esto pero FF, OP sí)
+            document.body.addEventListener("dragover",
+                function (evento){
+                    //Pero no en botones file (CH y FF)
+                    if (evento.target.type!="file"){
+                        evento.preventDefault();
+                        return false;
+                    }
+                }, true);
+            //Anulamos el  drop en toda la página
+            document.body.addEventListener("drop",
+                function (evento){
+                    //Pero no en botones file (CH y FF)
+                    if (evento.target.type!="file"){
+                        evento.preventDefault();
+                        return false;
+                    }
+                }, true);
+            //Manejamos drop del DIV
+            ta3.addEventListener("drop",
+                function (evento){
+                    evento.stopPropagation();
+                    evento.preventDefault();
+                    leerArchivo3(evento.dataTransfer.files);
+                } , false);
+           
+        };
+        </script>
+</body>
+</html>
