@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" lang="es-es">
 <title>Leer archivo de imagen, con capacidades drag & drop</title>
-
+<link rel="stylesheet" href="styles.css">
 <style>
 div {
 margin-top: 30px;
@@ -64,10 +64,15 @@ processFiles(files);
 </head>
 
 <body>
+    <div class="contenedor sombra">
 
-<nav><a href="ejemplo.html">otro ejemplo</a></nav>
-<input id="fileInput" type="file" size="50" onchange="processFiles(this.files)">
-<div id="fileOutput"></div>
+        <input id="fileInput" type="file" size="50" onchange="processFiles(this.files)">
+        <div id="fileOutput"></div>
+        <nav class="navegacion">
+            <a href="ejemplo.html">Siguiente</a>
+        </nav>
+    </div>
+    
 
 
 

@@ -1,0 +1,403 @@
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp VHDL Synthesis Compiler: Version 6.3 IR 35
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  alu.vhd
+Options:    -m -yu -e10 -w100 -o2 -ygs -fP -v10 -dc22v10 -ppalc22v10d-25pc -b alu.vhd -u ejercicio2.hie
+======================================================================
+
+vhdlfe V6.3 IR 35:  VHDL parser
+Wed Apr 21 18:39:17 2021
+
+Library 'work' => directory 'lc22v10'
+Linking 'C:\ARCHIV~1\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\work\cypress.vif'.
+Library 'ieee' => directory 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work'
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\syntocyp.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\synarith.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\synusgnd.vif'.
+alu.vhd (line 19, col 16):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+alu.vhd (line 21, col 20):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+alu.vhd (line 23, col 20):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+alu.vhd (line 25, col 20):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+alu.vhd (line 27, col 20):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+alu.vhd (line 28, col 20):  Note: Substituting module 'add_vv_v_us' for '+'.
+alu.vhd (line 29, col 20):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+alu.vhd (line 31, col 20):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+alu.vhd (line 32, col 20):  Note: Substituting module 'sub_vv_v_us' for '-'.
+alu.vhd (line 33, col 20):  Note: Substituting module 'cmp_vv_us_bl' for '='.
+alu.vhd (line 34, col 20):  Note: Substituting module 'sub_vv_v_us' for '-'.
+
+vhdlfe:  No errors.
+
+
+tovif V6.3 IR 35:  High-level synthesis
+Wed Apr 21 18:39:17 2021
+
+Linking 'C:\ARCHIV~1\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\work\cypress.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\syntocyp.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\synarith.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\synusgnd.vif'.
+alu.vhd (line 19, col 16):  Warning: (W479) 'sel' should be referenced in the sensitivity list.
+alu.vhd (line 21, col 20):  Warning: (W479) 'sel' should be referenced in the sensitivity list.
+alu.vhd (line 23, col 20):  Warning: (W479) 'sel' should be referenced in the sensitivity list.
+alu.vhd (line 25, col 20):  Warning: (W479) 'sel' should be referenced in the sensitivity list.
+alu.vhd (line 27, col 20):  Warning: (W479) 'sel' should be referenced in the sensitivity list.
+alu.vhd (line 29, col 20):  Warning: (W479) 'sel' should be referenced in the sensitivity list.
+alu.vhd (line 31, col 20):  Warning: (W479) 'sel' should be referenced in the sensitivity list.
+alu.vhd (line 33, col 20):  Warning: (W479) 'sel' should be referenced in the sensitivity list.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\syntocyp.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\madd_sub.vif'.
+
+tovif:  No errors.  8 warnings.
+
+
+topld V6.3 IR 35:  Synthesis and optimization
+Wed Apr 21 18:39:18 2021
+
+Linking 'C:\ARCHIV~1\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\work\cypress.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\syntocyp.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\synarith.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\ieee\work\synusgnd.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\syntocyp.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\common\stdlogic\madd_sub.vif'.
+Linking 'C:\ARCHIV~1\Cypress\Warp\lib\lc22v10\stdlogic\c22v10.vif'.
+
+----------------------------------------------------------
+Detecting unused logic.
+----------------------------------------------------------
+    User names
+	\MODULE_7:g1:a0:g0:g2:u0:ei_4\
+	\MODULE_7:g1:a0:g0:g2:u0:ri_4\
+	\MODULE_7:g1:a0:g0:g2:u0:ci_4\
+	\MODULE_7:g1:a0:g0:g2:u0:ga:t1:ga0(1):gas:u1\
+	\MODULE_7:g1:a0:g0:g2:u0:ga:t1:ga0(1):gas:u2\
+	\MODULE_7:g1:a0:g0:g2:u0:ga:t1:ga0(1):u3\
+	\MODULE_7:g1:a0:g0:g2:u0:cout\
+	\MODULE_7:g1:a0:g0:g2:u0:overflow\
+	\MODULE_10:g1:a0:g0:g2:u0:ei_4\
+	\MODULE_10:g1:a0:g0:g2:u0:ri_4\
+	\MODULE_10:g1:a0:g0:g2:u0:ci_4\
+	\MODULE_10:g1:a0:g0:g2:u0:gs:t1:gs0(1):gss:u1\
+	\MODULE_10:g1:a0:g0:g2:u0:gs:t1:gs0(1):gss:u2\
+	\MODULE_10:g1:a0:g0:g2:u0:gs:t1:gs0(1):u3\
+	\MODULE_10:g1:a0:g0:g2:u0:cout\
+	\MODULE_10:g1:a0:g0:g2:u0:overflow\
+
+
+Deleted 16 User equations/components.
+Deleted 0 Synthesized equations/components.
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+
+------------------------------------------------------
+Aliased 0 equations, 40 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 24 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 10.
+----------------------------------------------------------
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+
+------------------------------------------------------
+Aliased 0 equations, 0 wires.
+------------------------------------------------------
+Created 109 PLD nodes.
+
+topld:  No errors.
+
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+DESIGN HEADER INFORMATION  (18:39:19)
+
+Input File(s): alu.pla
+Device       : C22V10
+Package      : palc22v10d-25pc
+ReportFile   : alu.rpt
+
+Program Controls:
+    COMMAND LANGUAGE_VHDL 
+    COMMAND PROPERTY BUS_HOLD ENABLE 
+
+Signal Requests:
+    GROUP USEPOL ALL
+    GROUP FAST_SLEW ALL
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+OPTIMIZATION OPTIONS       (18:39:19)
+
+Messages:
+  Information: Process virtual '\MODULE_10:g1:a0:g0:g2:u0:c_2\'\MODULE_10:g1:a0:g0:g2:u0:c_2\ ... expanded.
+  Information: Process virtual '\MODULE_7:g1:a0:g0:g2:u0:c_2\'\MODULE_7:g1:a0:g0:g2:u0:c_2\ ... expanded.
+  Information: Process virtual '\MODULE_10:g1:a0:g0:g2:u0:c_0\'\MODULE_10:g1:a0:g0:g2:u0:c_0\ ... expanded.
+  Information: Process virtual '\MODULE_7:g1:a0:g0:g2:u0:c_0\'\MODULE_7:g1:a0:g0:g2:u0:c_0\ ... expanded.
+  Information: Optimizing logic using best output polarity for signals:
+         \MODULE_10:g1:a0:g0:g2:u0:gs:g1:us0\
+         \MODULE_7:g1:a0:g0:g2:u0:ga:g1:ua0\ total(0) total(1) total(2)
+         total(3)
+
+  Information: Selected logic optimization OFF for signals:
+         c f(0) f(1) f(2)
+
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Optimizer Software:       MINOPT.EXE     01/NOV/1999  [v4.02 ] 6.3 IR 35
+
+LOGIC MINIMIZATION         ()
+
+Messages:
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+OPTIMIZATION OPTIONS       (18:39:19)
+
+Messages:
+  Information: Optimizing Banked Preset/Reset requirements.
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+<CYPRESSTAG name="Equations" icon=FILE_RPT_EQUATION>
+DESIGN EQUATIONS           (18:39:19)
+</CYPRESSTAG>
+
+    \MODULE_10:g1:a0:g0:g2:u0:gs:g1:us0\ =
+          /a(0) * b(0) * b(1) 
+        + /a(0) * /a(1) * b(0) 
+        + /a(1) * b(1) 
+
+    \MODULE_7:g1:a0:g0:g2:u0:ga:g1:ua0\ =
+          a(0) * b(0) * b(1) 
+        + a(0) * a(1) * b(0) 
+        + a(1) * b(1) 
+
+    c =
+          total(3) 
+
+    f(0) =
+          total(0) 
+
+    f(1) =
+          total(1) 
+
+    f(2) =
+          total(2) 
+
+    total(0) =
+          /a(0) * b(0) * /sel(0) * sel(2) 
+        + /b(0) * sel(0) * /sel(1) * sel(2) 
+        + /a(0) * sel(0) * sel(1) * /sel(2) 
+        + a(0) * b(0) * /sel(1) * /sel(2) 
+        + /a(0) * b(0) * sel(1) 
+        + a(0) * /b(0) * sel(2) 
+        + a(0) * /sel(0) * /sel(2) 
+
+    total(1) =
+          /a(0) * a(1) * b(0) * b(1) * sel(1) * sel(2) 
+        + /a(0) * /a(1) * b(0) * /b(1) * sel(1) * sel(2) 
+        + a(0) * /a(1) * b(0) * /b(1) * /sel(1) * sel(2) 
+        + a(0) * a(1) * b(0) * b(1) * /sel(0) * /sel(1) 
+        + /a(0) * /a(1) * b(1) * /sel(0) * /sel(1) * sel(2) 
+        + a(0) * a(1) * /b(1) * sel(1) * sel(2) 
+        + /a(1) * /b(0) * b(1) * /sel(0) * sel(2) 
+        + /a(0) * a(1) * /b(1) * /sel(1) * sel(2) 
+        + a(0) * /a(1) * b(1) * sel(1) 
+        + /a(1) * /b(0) * b(1) * sel(1) 
+        + a(1) * /b(0) * /b(1) * sel(2) 
+        + /b(1) * sel(0) * /sel(1) * sel(2) 
+        + /a(1) * sel(0) * sel(1) * /sel(2) 
+        + b(1) * /sel(0) * sel(1) * /sel(2) 
+        + a(1) * b(1) * /sel(1) * /sel(2) 
+        + a(1) * /sel(0) * /sel(2) 
+
+    total(2) =
+          /\MODULE_7:g1:a0:g0:g2:u0:ga:g1:ua0\ * /a(2) * b(2) * /sel(0) * 
+          /sel(1) * sel(2) 
+        + \MODULE_10:g1:a0:g0:g2:u0:gs:g1:us0\ * a(2) * b(2) * sel(1) * 
+          sel(2) 
+        + /\MODULE_10:g1:a0:g0:g2:u0:gs:g1:us0\ * a(2) * /b(2) * sel(1) * 
+          sel(2) 
+        + \MODULE_10:g1:a0:g0:g2:u0:gs:g1:us0\ * /a(2) * /b(2) * sel(1) * 
+          sel(2) 
+        + /\MODULE_7:g1:a0:g0:g2:u0:ga:g1:ua0\ * a(2) * /b(2) * /sel(1) * 
+          sel(2) 
+        + \MODULE_7:g1:a0:g0:g2:u0:ga:g1:ua0\ * /a(2) * /b(2) * /sel(1) * 
+          sel(2) 
+        + \MODULE_7:g1:a0:g0:g2:u0:ga:g1:ua0\ * a(2) * b(2) * /sel(0) * 
+          /sel(1) 
+        + /\MODULE_10:g1:a0:g0:g2:u0:gs:g1:us0\ * /a(2) * b(2) * sel(1) 
+        + /b(2) * sel(0) * /sel(1) * sel(2) 
+        + /a(2) * sel(0) * sel(1) * /sel(2) 
+        + b(2) * /sel(0) * sel(1) * /sel(2) 
+        + a(2) * b(2) * /sel(1) * /sel(2) 
+        + a(2) * /sel(0) * /sel(2) 
+
+    total(3) =
+          a(2) * b(2) * /sel(0) * /sel(1) * sel(2) 
+        + \MODULE_7:g1:a0:g0:g2:u0:ga:g1:ua0\ * b(2) * /sel(0) * /sel(1) * 
+          sel(2) 
+        + \MODULE_7:g1:a0:g0:g2:u0:ga:g1:ua0\ * a(2) * /sel(0) * /sel(1) * 
+          sel(2) 
+        + \MODULE_10:g1:a0:g0:g2:u0:gs:g1:us0\ * b(2) * sel(1) * sel(2) 
+        + /a(2) * b(2) * sel(1) * sel(2) 
+        + \MODULE_10:g1:a0:g0:g2:u0:gs:g1:us0\ * /a(2) * sel(1) * sel(2) 
+
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+DESIGN RULE CHECK          (18:39:19)
+
+Messages:
+                 None.
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+<CYPRESSTAG name="Pinout" icon=FILE_RPT_PINOUT>
+PINOUT INFORMATION   (18:39:19)
+</CYPRESSTAG>
+Messages:
+  Information: Checking for duplicate NODE logic.
+                 None.
+
+
+                                 C22V10
+                 __________________________________________
+           b(2) =| 1|                                  |24|* not used       
+           a(2) =| 2|                                  |23|= total(3)       
+         sel(2) =| 3|                                  |22|= (\MODULE_10:.. 
+         sel(1) =| 4|                                  |21|= f(1)           
+         sel(0) =| 5|                                  |20|= f(0)           
+           b(1) =| 6|                                  |19|= c              
+           b(0) =| 7|                                  |18|= total(1)       
+           a(1) =| 8|                                  |17|= total(2)       
+           a(0) =| 9|                                  |16|= f(2)           
+       not used *|10|                                  |15|= (\MODULE_7:g.. 
+       not used *|11|                                  |14|= total(0)       
+       not used *|12|                                  |13|* not used       
+                 __________________________________________
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+<CYPRESSTAG name="Utilization" icon=FILE_RPT_UTILIZATION>
+RESOURCE UTILIZATION (18:39:19)
+</CYPRESSTAG>
+  Information: Macrocell Utilization.
+
+                     Description        Used     Max
+                 ______________________________________
+                 | Dedicated Inputs   |    8  |   11  |
+                 | Clock/Inputs       |    1  |    1  |
+                 | I/O Macrocells     |   10  |   10  |
+                 ______________________________________
+                                          19  /   22   = 86  %
+
+
+  Information: Output Logic Product Term Utilization.
+
+                  Node#  Output Signal Name  Used   Max
+                 ________________________________________
+                 | 14  |  total(0)        |   7  |   8  |
+                 | 15  |  \MODULE_7:g1..  |   3  |  10  |
+                 | 16  |  f(2)            |   1  |  12  |
+                 | 17  |  total(2)        |  13  |  14  |
+                 | 18  |  total(1)        |  16  |  16  |
+                 | 19  |  c               |   1  |  16  |
+                 | 20  |  f(0)            |   1  |  14  |
+                 | 21  |  f(1)            |   1  |  12  |
+                 | 22  |  \MODULE_10:g..  |   3  |  10  |
+                 | 23  |  total(3)        |   6  |   8  |
+                 | 25  |  Unused          |   0  |   1  |
+                 ________________________________________
+                                             52  / 121   = 42  %
+
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+JEDEC ASSEMBLE             (18:39:19)
+
+Messages:
+  Information: Output file 'alu.pin' created.
+  Information: Output file 'alu.jed' created.
+
+  Usercode:    
+  Checksum:    4B05
+
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully at 18:39:19
